@@ -1,0 +1,23 @@
+[root@localhost~]<input id="input1"/>
+<pre>
+<div id="d1">output</div>
+</pre>
+iii from web server
+<script>
+function lw1(){
+i=document.getElementById("input1");
+var xhr= new XMLHttpRequest();
+xhr.open("GET", "http://192.168.23.26/cgi-bin/docker.py?x="
++i.value ,true);
+xhr.send();
+xhr.onload=function() {
+var output = xhr.responseText;
+document.getElementById("d1").innerHTML=output;
+}
+}
+
+</script>
+<button onclick="lw1()";> click </button>
+~                                                                               
+~                                                                               
+~                                   
